@@ -1,18 +1,10 @@
 import { memo } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { useAppDispatch } from '../../store/hooks.ts'
-import { logoutUser } from '../../store/slices/auth.slice.ts'
 import logoImage from '../../assets/Logo.png'
 
 const HeaderComponent = () => {
   const navigate = useNavigate()
   const location = useLocation()
-  const dispatch = useAppDispatch()
-
-  const handleLogout = async () => {
-    await dispatch(logoutUser())
-    navigate('/login')
-  }
 
   const isActive = (path: string) => location.pathname === path
 
