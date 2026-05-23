@@ -8,7 +8,7 @@ import { AuthForm } from '../../components/forms/index.ts'
 import { AuthLayout } from '../../components/auth/index.ts'
 import { loginSchema, type LoginFormData } from '../../utils/validation.ts'
 import { EmailIcon, PasswordIcon } from '../../utils/auth-icons.tsx'
-import heroImage from '../../assets/Illustrasi_login.png'
+import heroImage from '../../assets/Illustrasi_Login.png'
 
 export const LoginPage = () => {
   const dispatch = useAppDispatch()

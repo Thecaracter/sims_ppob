@@ -8,7 +8,7 @@ import { AuthForm } from '../../components/forms/index.ts'
 import { AuthLayout } from '../../components/auth/index.ts'
 import { registerSchema, type RegisterFormData } from '../../utils/validation.ts'
 import { EmailIcon, PasswordIcon, UserIcon } from '../../utils/auth-icons.tsx'
-import heroImage from '../../assets/Illustrasi_login.png'
+import heroImage from '../../assets/Illustrasi_Login.png'
 
 export const RegisterPage = () => {
   const dispatch = useAppDispatch()
