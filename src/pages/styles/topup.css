@@ -1,0 +1,126 @@
+/* Top Up Page Styles */
+
+/* Top Section: Profile and Balance */
+.topup-top-section {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10 items-start;
+}
+
+.topup-profile-section {
+  @apply flex flex-col items-center lg:items-start gap-4 lg:col-span-1 text-center lg:text-left;
+}
+
+/* Form Section */
+.topup-form-section {
+  @apply mt-4;
+}
+
+.topup-form-header {
+  @apply mb-8;
+}
+
+.topup-label {
+  @apply text-base text-gray-text mb-2;
+}
+
+.topup-title {
+  @apply text-2xl sm:text-3xl font-bold text-gray-text m-0;
+}
+
+/* Form Grid: Input/Button (left) + Quick Amounts (right) */
+.topup-form-grid {
+  @apply grid grid-cols-1 lg:grid-cols-[650px_1fr] gap-6 lg:gap-8 items-start;
+}
+
+.topup-form-left {
+  @apply flex flex-col gap-5 w-full;
+}
+
+.topup-form-right {
+  @apply w-full;
+}
+
+/* Input Field */
+.topup-input-group {
+  @apply w-full;
+}
+
+.topup-input-wrapper {
+  @apply relative flex items-center w-full;
+}
+
+.topup-input-icon {
+  @apply absolute left-4 text-xl flex items-center pointer-events-none;
+}
+
+.topup-input {
+  @apply w-full px-4 py-3 pl-12 border border-gray-border rounded-lg text-sm transition-colors bg-white placeholder-gray-icon;
+  @apply focus:outline-none focus:border-red-primary focus:ring-1 focus:ring-red-primary;
+}
+
+.topup-input::placeholder {
+  @apply text-gray-icon;
+}
+
+/* Quick Amount Buttons */
+.topup-quick-amounts {
+  @apply grid grid-cols-3 w-full;
+  gap: 16px;
+}
+
+.topup-quick-btn {
+  @apply border border-gray-border rounded-lg text-sm font-medium text-gray-text bg-white;
+  @apply hover:border-red-primary hover:text-red-primary transition-all cursor-pointer;
+  @apply focus:outline-none focus:border-red-primary focus:ring-1 focus:ring-red-primary;
+  @apply flex items-center justify-center text-center;
+  padding: 12px 16px;
+  min-height: 44px;
+  width: 100%;
+}
+
+.topup-quick-btn:active {
+  @apply bg-red-light;
+}
+
+/* Submit Button */
+.topup-submit-btn {
+  @apply w-full mt-0;
+}
+
+/* Disabled button state - gray instead of red with opacity */
+.topup-submit-btn:disabled {
+  @apply bg-gray-300 text-gray-500 cursor-not-allowed;
+  opacity: 1;
+}
+
+.topup-submit-btn:disabled:hover {
+  @apply bg-gray-300 transform-none shadow-none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .topup-top-section {
+    @apply grid-cols-1;
+  }
+
+  .topup-profile-section {
+    @apply items-center text-center;
+  }
+
+  .topup-form-grid {
+    @apply grid-cols-1 gap-6;
+  }
+
+  .topup-quick-amounts {
+    @apply grid-cols-2 gap-3;
+  }
+}
+
+@media (max-width: 640px) {
+  .topup-title {
+    @apply text-xl;
+  }
+
+  .topup-quick-amounts {
+    @apply grid-cols-2 gap-3;
+  }
+}

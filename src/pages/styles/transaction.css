@@ -1,0 +1,124 @@
+/* Transaction Page Styles */
+
+/* Top Section: Profile and Balance */
+.transaction-top-section {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12 items-start;
+}
+
+.transaction-profile-section {
+  @apply flex flex-col items-center lg:items-start gap-4 lg:col-span-1 text-center lg:text-left;
+}
+
+/* Transaction List Section */
+.transaction-list-section {
+  @apply mt-0 w-full;
+}
+
+.transaction-list-title {
+  @apply text-xl font-bold text-gray-text mb-6;
+}
+
+.transaction-list {
+  @apply flex flex-col;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.transaction-item {
+  @apply flex items-center justify-between px-6 py-5;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fff;
+  transition: background 0.15s ease;
+}
+
+.transaction-item:hover {
+  background: #fafafa;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+/* Left side: amount + date stacked vertically */
+.transaction-amount-wrapper {
+  @apply flex flex-col gap-1 flex-shrink-0;
+  min-width: 140px;
+}
+
+.transaction-amount {
+  @apply text-xl font-bold;
+}
+
+.transaction-amount-positive {
+  @apply text-green-600;
+}
+
+.transaction-amount-negative {
+  @apply text-red-primary;
+}
+
+.transaction-date {
+  @apply text-xs text-gray-400;
+}
+
+/* Right side: description */
+.transaction-details {
+  @apply flex items-center justify-end flex-1 ml-4;
+}
+
+.transaction-description {
+  @apply text-sm font-normal text-gray-text text-right;
+}
+
+.transaction-load-more {
+  @apply w-full text-center py-5 mt-4 text-red-primary font-semibold text-sm;
+  @apply hover:text-red-dark transition-colors cursor-pointer;
+  @apply bg-transparent border-0;
+  letter-spacing: 0.01em;
+}
+
+.transaction-load-more:disabled {
+  @apply text-gray-400 cursor-not-allowed;
+}
+
+.transaction-loading {
+  @apply text-center py-8 text-gray-400;
+}
+
+.transaction-empty {
+  @apply text-center py-12;
+}
+
+.transaction-empty p {
+  @apply text-gray-400 text-base;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .transaction-top-section {
+    @apply grid-cols-1;
+  }
+
+  .transaction-profile-section {
+    @apply items-center text-center;
+  }
+}
+
+@media (max-width: 640px) {
+  .transaction-item {
+    @apply px-4 py-4;
+  }
+
+  .transaction-amount-wrapper {
+    min-width: 110px;
+  }
+
+  .transaction-amount {
+    @apply text-lg;
+  }
+
+  .transaction-details {
+    @apply ml-3;
+  }
+}

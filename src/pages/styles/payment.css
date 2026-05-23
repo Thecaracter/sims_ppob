@@ -1,0 +1,182 @@
+.payment-wrapper {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.payment-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Top Section */
+.payment-top-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Profile Section */
+.payment-profile-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+}
+
+.profile-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profile-label {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Balance Card */
+.balance-card {
+  background-color: #f13b2f;
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.balance-content {
+  position: relative;
+  z-index: 1;
+}
+
+.balance-label {
+  font-size: 0.875rem;
+  margin: 0 0 0.5rem 0;
+  opacity: 0.9;
+}
+
+.balance-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.balance-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.balance-button:hover {
+  opacity: 0.8;
+}
+
+/* Payment Section */
+.payment-section {
+  @apply mt-4 w-full;
+}
+
+.payment-info {
+  @apply mb-8 text-left;
+}
+
+.payment-label {
+  @apply text-base text-gray-text mb-4;
+}
+
+.payment-service {
+  @apply flex items-center justify-start gap-3;
+}
+
+.payment-service-icon {
+  @apply w-10 h-10 object-contain;
+}
+
+.payment-service-name {
+  @apply text-xl font-bold text-gray-text m-0;
+}
+
+/* Form Section */
+.payment-form {
+  @apply flex flex-col gap-5 w-full;
+}
+
+/* Input Field */
+.payment-input-group {
+  @apply w-full;
+}
+
+.payment-input-wrapper {
+  @apply relative flex items-center w-full;
+}
+
+.payment-input-icon {
+  @apply absolute left-4 text-xl flex items-center pointer-events-none text-gray-icon;
+}
+
+.payment-input {
+  @apply w-full px-4 py-3 pl-12 border border-gray-border rounded-lg text-sm transition-colors bg-white text-gray-text font-medium;
+  @apply focus:outline-none focus:border-red-primary focus:ring-1 focus:ring-red-primary;
+}
+
+/* Submit Button */
+.payment-submit-btn {
+  @apply w-full mt-0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-top-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .payment-main {
+    padding: 1.5rem 1rem;
+  }
+
+  .profile-name {
+    font-size: 1.25rem;
+  }
+
+  .balance-amount {
+    font-size: 1.5rem;
+  }
+
+  .payment-service-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .payment-service-name {
+    font-size: 1rem;
+  }
+}
