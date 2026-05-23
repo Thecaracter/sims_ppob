@@ -41,7 +41,6 @@ export const registerSchema = z.object({
 export const profileUpdateSchema = z.object({
   first_name: z.string().min(1, 'Nama depan tidak boleh kosong'),
   last_name: z.string().min(1, 'Nama belakang tidak boleh kosong'),
-  phone_number: z.string().optional(),
 })
 
 export const topUpSchema = z.object({
